@@ -1,0 +1,144 @@
+body{
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+ background-image: url(./pexels-anniroenkae-2832533.jpg);
+ background-repeat: no-repeat;
+  height: 100vh;
+  
+}
+
+.page{
+  margin-top: 6rem;
+ padding: 1.2rem;
+ background: rgba(255, 255, 255,.1);
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(15px);
+ margin-left: 2rem;
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ border-radius: 1.2rem;
+ margin-right: 2rem;
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+ transition: transform 0.3s;
+ color: white;
+ font-weight: 900;
+}
+
+#main-heading{
+  text-align: center;
+ 
+}
+.headingCont{
+  display: grid;
+  grid-template-columns:12.5rem 12.5rem 6.25rem;
+  column-gap:1rem ;
+  row-gap: .95rem;
+  margin-bottom: .95rem;
+} 
+.todoContainer{
+  display: grid;
+  grid-template-columns:12.5rem 12.5rem 6.25rem;
+  row-gap: 1rem;
+  column-gap:1rem ;
+  font-size: 1.4rem;
+  padding: .55rem;
+  box-sizing: border-box;
+}
+.todo-container button {
+  transition: border-color 0.3s, padding 0.3s;
+  box-sizing: border-box; 
+  
+}
+
+
+#todoInput ,#todoDate{
+  font-size: 1.5rem;
+  padding: .45rem;
+  border-radius: 0.8rem;
+  border: 2px solid grey;
+  
+}
+.btn-todo{
+  background-color: #1579dd;
+border: none;
+border-radius: .5rem;
+font-size: 1.5rem;
+cursor: pointer;
+color: #D8EFD3;
+
+}
+.btn-delete{
+  background-color: #ff4136;
+font-size: 17px;
+color: aliceblue;
+border-radius: .4rem;
+border: none;
+padding: .55rem;
+cursor: pointer;
+margin-top: 6px;
+
+}
+
+.btn-todo:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+.btn-delete:hover {
+  background-color: #790a0a;
+  transform: scale(1.05);
+}
+.todo-container input[type="text"],
+.todo-container input[type="date"],
+.todo-container button {
+  width: calc(90% - 16px); 
+  max-width: 90%; 
+}
+
+@media (max-width: 768px) {
+  .page{
+    margin-left:0.5rem ;
+    margin-right: 0.5rem;
+    padding: 0.4rem;
+    border: 2px;
+    border-radius: .25rem;
+  }
+  .headingCont{
+    grid-template-columns:2fr,2fr,1fr ;
+    display:flex;row-gap: 1rem;
+    column-gap:.5rem ;
+    font-size: 1rem;
+    padding: .1rem;
+  }
+  .todoContainer{
+    grid-template-columns:repeat(3,1fr) ;
+    row-gap: 1rem;
+    column-gap:.5rem ;
+    font-size: 1.5rem;
+    padding: .35rem;
+   text-align: center;
+  }
+  .item{
+    flex-shrink: 1;
+    font-size: .92rem;
+    padding-top: 20px;
+  }
+  .dueDate{
+    flex-shrink: 1;
+    font-size: .8rem;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+  .btn-delete{
+   
+    font-size: 14px;
+    margin-left: 25px;
+    
+  }
+  .btn-todo{
+    
+    font-size: 1rem;
+  }
+  #todoInput ,#todoDate{
+    font-size: 1rem;
+  }
+}
